@@ -1,5 +1,5 @@
-import { DocumentTextIcon } from '@sanity/icons'
-import { defineField, defineType } from 'sanity'
+import { DocumentTextIcon } from '@sanity/icons';
+import { defineField, defineType } from 'sanity';
 
 export const postType = defineType({
   name: 'post',
@@ -11,61 +11,61 @@ export const postType = defineType({
     defineField({
       name: 'title',
       type: 'string',
-      title: 'Title',
+      title: 'Title'
     }),
-        defineField({
+    defineField({
       name: 'description',
       type: 'string',
-      title: 'Description',
+      title: 'Description'
     }),
     defineField({
       name: 'slug',
       type: 'slug',
       options: {
-        source: 'title',
-      },
+        source: 'title'
+      }
     }),
     defineField({
       name: 'author',
       type: 'reference',
-      to: {type: 'author'},
+      to: { type: 'author' }
     }),
     defineField({
       name: 'mainImage',
       type: 'image',
       options: {
-        hotspot: true,
+        hotspot: true
       }
     }),
     defineField({
       name: 'category',
       title: 'Category',
       type: 'reference',
-      to: {type: 'category'},
+      to: { type: 'category' }
     }),
     defineField({
       name: 'publishedAt',
-      type: 'datetime',
+      type: 'datetime'
     }),
     defineField({
       name: 'readTime',
       title: 'Read Time',
-      type: 'number',
+      type: 'number'
     }),
     defineField({
       name: 'body',
-      type: 'blockContent',
-    }),
+      type: 'blockContent'
+    })
   ],
   preview: {
     select: {
       title: 'title',
       author: 'author.name',
-      media: 'mainImage',
+      media: 'mainImage'
     },
     prepare(selection) {
-      const {author} = selection
-      return {...selection, subtitle: author && `by ${author}`}
-    },
-  },
-})
+      const { author } = selection;
+      return { ...selection, subtitle: author && `by ${author}` };
+    }
+  }
+});
