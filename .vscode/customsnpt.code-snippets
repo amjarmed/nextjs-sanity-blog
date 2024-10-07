@@ -1,0 +1,54 @@
+{
+  /* 
+/**
+ * This file contains code snippets for Next.js.
+ *
+ * The code snippets are designed to be used with the Visual Studio Code
+ * editor and provide a convenient way to quickly generate commonly used
+ * code blocks for Next.js projects.
+ *
+ * The following code snippets are included:
+ *
+ */
+  //MARK: typescript
+  "typescript Function ": {
+    "prefix": "tsfc",
+    "body": [
+      "const ${1:${TM_FILENAME_BASE}} = () => {",
+      "  console.log(${1:first})",
+      "}",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Creates typescript function ",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "typescript interface ": {
+    "prefix": "tsint",
+    "body": [
+      "export interface ${1:${TM_FILENAME_BASE}}  {",
+      "  name:string",
+      "",
+      "}"
+    ],
+    "description": "Creates typescript interface ",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  "typescript component": {
+    "prefix": "fc",
+    "body": [
+      "import {FC} from 'react'",
+      "",
+      "interface ${1:${TM_FILENAME_BASE}}Props {",
+      "  name: string",
+      "}",
+      "",
+      "export const ${1:${TM_FILENAME_BASE}}: FC<${1:${TM_FILENAME_BASE}}Props> = () => {",
+      "  return <div>${TM_FILENAME_BASE} </div>",
+      "}",
+      "export default ${1:${TM_FILENAME_BASE}}"
+    ],
+    "description": "Creates typescript component ",
+    "scope": "typescript,typescriptreact,javascript,javascriptreact"
+  },
+  //MARK: React
+}
