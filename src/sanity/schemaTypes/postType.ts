@@ -1,15 +1,17 @@
-import {DocumentTextIcon} from '@sanity/icons'
-import {defineArrayMember, defineField, defineType} from 'sanity'
+import { DocumentTextIcon } from '@sanity/icons'
+import { defineField, defineType } from 'sanity'
 
 export const postType = defineType({
   name: 'post',
   title: 'Post',
   type: 'document',
   icon: DocumentTextIcon,
+
   fields: [
     defineField({
       name: 'title',
       type: 'string',
+      title: 'Title',
     }),
     defineField({
       name: 'slug',
@@ -28,23 +30,22 @@ export const postType = defineType({
       type: 'image',
       options: {
         hotspot: true,
-      },
-      fields: [
-        {
-          name: 'alt',
-          type: 'string',
-          title: 'Alternative text',
-        }
-      ]
+      }
     }),
     defineField({
-      name: 'categories',
-      type: 'array',
-      of: [defineArrayMember({type: 'reference', to: {type: 'category'}})],
+      name: 'category',
+      title: 'Category',
+      type: 'reference',
+      to: {type: 'category'},
     }),
     defineField({
       name: 'publishedAt',
       type: 'datetime',
+    }),
+    defineField({
+      name: 'readTime',
+      title: 'Read Time',
+      type: 'number',
     }),
     defineField({
       name: 'body',
