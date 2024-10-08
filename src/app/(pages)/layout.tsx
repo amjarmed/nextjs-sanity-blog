@@ -1,3 +1,5 @@
+import FloatingButton from '@/components/navigation/floating-button';
+import Footer from '@/components/navigation/footer';
 import Navabar from '@/components/navigation/navabar';
 import React from 'react';
 
@@ -8,8 +10,8 @@ export default function layout({ children }: { children: React.ReactNode }) {
       <Navabar />
       <div className='container space-y-12 md:space-y-20'>{children}</div>
 
-      {/* <Footer/> */}
-      {/* <FloatingButton/> */}
+      <Footer />
+      <FloatingButton />
     </main>
   );
 }
