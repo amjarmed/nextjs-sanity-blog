@@ -4,9 +4,9 @@ import { Post } from '@/types/interfaces';
 async function getPosts() {
   const query = `
   
-  *[_type== 'post']|order(publishedAt desc){...,
-  _author->,
-  _category->,
+   *[_type== 'post']|order(publishedAt desc){...,
+  author->,
+  category->,
   }
   
   `;

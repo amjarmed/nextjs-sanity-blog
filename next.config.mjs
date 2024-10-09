@@ -4,11 +4,21 @@ const nextConfig = {
   i18n: {
     locales: ['en', 'ar'],
     defaultLocale: 'en',
-    localeDetection: false,
+    localeDetection: false
   },
+
   images: {
-    domains: ['images.unsplash.com', 'learnwebcode.github.io'],
-  },
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'cdn.sanity.io'
+      },
+      {
+        protocol: 'https',
+        hostname: 'simpleicons.org'
+      }
+    ]
+  }
 };
 
 export default nextConfig;
