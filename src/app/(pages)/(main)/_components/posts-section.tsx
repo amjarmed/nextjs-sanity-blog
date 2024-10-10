@@ -1,7 +1,7 @@
 import PostCard from '@/components/post-card';
 import SectionTitle from '@/components/secetion-title';
 import { buttonVariants } from '@/components/ui/button';
-import getPosts from '@/lib/post';
+import { getPosts } from '@/lib/post';
 import { ChevronLeftIcon } from 'lucide-react';
 import Link from 'next/link';
 

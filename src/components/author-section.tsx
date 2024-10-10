@@ -4,6 +4,7 @@ import { Github, Instagram, Linkedin } from 'lucide-react';
 // import { PortableText } from 'next-sanity';
 import { PortableText } from '@portabletext/react';
 import Link from 'next/link';
+import { richTextComponents } from './rich-text-component';
 import { Avatar, AvatarImage } from './ui/avatar';
 import { buttonVariants } from './ui/button';
 import { Card } from './ui/card';
@@ -19,7 +20,10 @@ const AuthorSection = async () => {
       <h3 className='text-xl md:text-2xl font-semibold'>{author.name}</h3>
       {/* TODO: display bio */}
 
-      <PortableText value={author.bio} />
+      <div className=' prose dark:prose-invert prose-li:marker:text-primary prose-a:text-primary prose-headings:text-primary'>
+        <PortableText value={author.bio} components={richTextComponents} />
+      </div>
+
       <div className='flex items-center gap-6'>
         <Link
           href={author.instagram || '/'}

@@ -47,7 +47,7 @@ export interface Post extends Base {
   mainImage: Image;
   publishedAt: Date;
   readTime: number;
-  content: Block[];
+  body: Block[];
 }
 
 // block interface
