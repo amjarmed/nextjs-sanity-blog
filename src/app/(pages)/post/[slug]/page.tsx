@@ -11,6 +11,24 @@ import { notFound } from 'next/navigation';
 import BackButton from '../_components/back-button';
 import RelatedPostsCard from '../_components/related-posts';
 //=============== single post page component =================
+// export page title and description
+export const generateMetadata = async ({
+  params
+}: {
+  params: { slug: string };
+}) => {
+  const { post } = await getPost(params.slug);
+  if (!post)
+    return {
+      title: 'مقال غير موجود - مدونتي',
+      description: 'المقال الذي تبحث عنه غير موجود أو تم تحويله'
+    };
+  return {
+    title: `${post?.title} - مدونتي`,
+    description: post?.description
+  };
+};
+
 export default async function page({ params }: { params: { slug: string } }) {
   // get single post
   const { post } = await getPost(params.slug);

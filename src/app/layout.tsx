@@ -8,8 +8,12 @@ const font = Noto_Kufi_Arabic({
 });
 
 export const metadata: Metadata = {
-  title: 'amjarmed- blog',
-  description: 'personal blog about web development and programming'
+  title: 'مدونتي',
+  description:
+    'مدونة شخصية تتناول مواضيع متنوعة كلية التكنولوجيا والتصوير. متابعة لأحدث المقالات والأفكار الشخصية التي تعكس رؤية الكاتب الفريدة وتجاربه.',
+  icons: {
+    icon: '/logo-icon.png'
+  }
 };
 
 export default function RootLayout({
