@@ -1,3 +1,5 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+
 //  rich text component
 
 import { urlFor } from '@/sanity/lib/image';
