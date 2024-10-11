@@ -10,7 +10,7 @@ export default function Logo() {
       <div className='flex items-center'>
         <Image src='/logo-icon.png' alt='logo' width={32} height={32} />
         <p className='ml-2'>
-          مرحبا <span className='text-primary'>بالعالم</span>
+          مدونة <span className='text-primary'> محمد أمجار</span>
         </p>
       </div>
     </Link>
