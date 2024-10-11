@@ -1,6 +1,7 @@
 import SectionTitle from '@/components/secetion-title';
 import { Card } from '@/components/ui/card';
 import getCategories from '@/lib/category';
+import Link from 'next/link';
 
 async function CategoriesSection() {
   const categories = await getCategories();
@@ -10,15 +11,18 @@ async function CategoriesSection() {
         <SectionTitle title='التصنيفات' />
         <div className='flex flex-col gap-4 md:gap-6 divide-y'>
           {categories.map((category) => (
-            <article
+            <Link
               key={category._id}
+              href={`/posts?categoryId=${category._id}`}
               className='py-4 first-of-type:pt-0 font-semibold space-y-2 '
             >
-              <h3 className='text-xl'>{category.title}</h3>
-              <p className='line-clamp-2 break-words'>
-                {category.description || 'لا يوجد وصف'}
-              </p>
-            </article>
+              <article>
+                <h3 className='text-xl'>{category.title}</h3>
+                <p className='line-clamp-2 break-words'>
+                  {category.description || 'لا يوجد وصف'}
+                </p>
+              </article>
+            </Link>
           ))}
         </div>
       </Card>

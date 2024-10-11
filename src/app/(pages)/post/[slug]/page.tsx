@@ -52,7 +52,10 @@ export default async function page({ params }: { params: { slug: string } }) {
                 })}
               </time>
               <span>*</span>
-              <Link href={''} className={buttonVariants({ variant: 'link' })}>
+              <Link
+                href={`/posts?categoryId=${post.category._id}`}
+                className={buttonVariants({ variant: 'link' })}
+              >
                 {post.category?.title}
               </Link>
             </div>

@@ -2,8 +2,16 @@ import { client } from '@/sanity/lib/client';
 import { Post } from '@/types/interfaces';
 
 // get all posts
-export async function getPosts() {
-  const query = `
+export async function getPosts(categoryId?: string) {
+  const query = categoryId
+    ? `
+   *[_type== 'post' && category->_id == '${categoryId}']|order(publishedAt desc){...,
+  author->,
+  category->,
+  }
+  
+  `
+    : `
   
    *[_type== 'post']|order(publishedAt desc){...,
   author->,
