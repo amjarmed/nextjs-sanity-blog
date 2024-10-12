@@ -3,6 +3,10 @@ import { Metadata } from 'next';
 import CategoriesSection from './_components/categories-section';
 import PostsSection from './_components/posts-section';
 
+// export revalidate time
+// todo: make it dynamic REVALIDATE_AFTER
+export const revalidate = 60;
+
 export const metadata: Metadata = {
   title: 'مدونتي ',
   description:

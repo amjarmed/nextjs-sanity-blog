@@ -7,3 +7,6 @@ export function cn(...inputs: ClassValue[]) {
 
 // number of posts per page
 export const POSTS_PER_PAGE = 4;
+
+// revalidate after 60 seconds
+export const REVALIDATE_AFTER: number = 60;
