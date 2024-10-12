@@ -3,6 +3,10 @@ import type { Metadata } from 'next';
 import { Noto_Kufi_Arabic } from 'next/font/google';
 import './globals.css';
 
+// revalidate
+
+export const revalidate = 60;
+
 const font = Noto_Kufi_Arabic({
   subsets: ['arabic']
 });
