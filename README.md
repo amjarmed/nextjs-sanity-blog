@@ -2,6 +2,10 @@
 
 A modern, fully responsive blog platform built with **Next.js**, **Sanity CMS**, **Tailwind CSS**, **Shadcn-UI**, and **TypeScript**. The platform allows you to manage and publish content dynamically, with a sleek UI and optimized performance for all devices.
 
+## DEMO
+
+[Demo](https://nextjs-sanity-blog-five.vercel.app/)
+
 ## Features
 
 - **Next.js**: Server-side rendering (SSR) and static site generation (SSG) for fast and SEO-friendly pages.
